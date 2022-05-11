@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\{
+    ShowTweets
+};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('tweets', ShowTweets::class);
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
